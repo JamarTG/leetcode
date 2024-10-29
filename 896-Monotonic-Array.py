@@ -6,7 +6,7 @@ class Solution:
         for i in range(1,len(nums)):
             if nums[i] < nums[i-1]:
                 is_increasing = False
-            if nums[i] > nums[i-1]:
+            elif nums[i] > nums[i-1]:
                 is_decreasing = False
         
         if not is_increasing and not is_decreasing:
