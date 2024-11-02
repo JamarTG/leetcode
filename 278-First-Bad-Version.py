@@ -10,10 +10,10 @@ class Solution:
             res = isBadVersion(mid)
                       
             if right == left:
-                return mid if res else mid + 1
+                return mid
         
             if res:
-                right = mid - 1
+                right = mid
             if not res:
                 left = mid + 1
 
