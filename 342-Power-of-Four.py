@@ -3,7 +3,7 @@ class Solution:
         c = 0
         even = True
 
-        if n < 4 and n != 1:
+        if n == 0:
             return False
 
         while n:
