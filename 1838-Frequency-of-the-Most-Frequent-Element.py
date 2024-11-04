@@ -4,26 +4,22 @@ class Solution:
         
         nums.sort(reverse = True)   
         max_freq = 0
-        L = len(nums)
 
 
-        for i in range(L):
+
+        for i in range(len(nums)):
             
             if i > 0 and nums[i] == nums[i-1]:
                 continue 
             
             j = i + 1
             operations = k
-            freq = 1
 
-            while operations >= 0 and j < L:
-                
-                amount_needed = nums[i] - nums[j]
+            while operations >= 0 and j < len(nums):
 
-                if operations - amount_needed >= 0:
-                    operations -= amount_needed
-                    freq +=1
-                else:
+                operations -= nums[i] - nums[j]
+            
+                if operations < 0:
                     break
 
                 j+=1
